@@ -1,1 +1,108 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Lora:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lora', serif;
+  color: #2c3e50;
+  background-color: #f5f3ef;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── CSS Variables for Light/Dark Theme ── */
+:root,
+[data-theme="light"] {
+  --bg:           #f5f3ef;
+  --bg-secondary: #ffffff;
+  --text:         #000000;
+  --text-muted:   #555555;
+  --border:       #000000;
+  --border-soft:  #d0c8b8;
+  --header-bg:    #f5f3ef;
+  --card-bg:      #ffffff;
+  --shadow:       rgba(0, 0, 0, 0.05);
+  --badge-shadow: rgba(0, 0, 0, 0.1);
+  --btn-filled-bg: #000000;
+  --btn-filled-text: #ffffff;
+  --btn-filled-hover-bg: #f5f3ef;
+  --btn-filled-hover-text: #000000;
+  --footer-grad-start: #5a7a8a;
+  --footer-grad-end:   #6a8a9a;
+  --toggle-bg:    #000000;
+  --toggle-text:  #ffffff;
+  --placeholder-border: #d0c8b8;
+  --input-border: #000000;
+  --qr-bg:        #f5f3ef;
+}
+
+[data-theme="dark"] {
+  --bg:           #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --text:         #f0ece4;
+  --text-muted:   #aaaaaa;
+  --border:       #f0ece4;
+  --border-soft:  #444444;
+  --header-bg:    #1a1a1a;
+  --card-bg:      #2a2a2a;
+  --shadow:       rgba(0, 0, 0, 0.3);
+  --badge-shadow: rgba(0, 0, 0, 0.4);
+  --btn-filled-bg: #f0ece4;
+  --btn-filled-text: #1a1a1a;
+  --btn-filled-hover-bg: #1a1a1a;
+  --btn-filled-hover-text: #f0ece4;
+  --footer-grad-start: #3a5a6a;
+  --footer-grad-end:   #4a6a7a;
+  --toggle-bg:    #f0ece4;
+  --toggle-text:  #1a1a1a;
+  --placeholder-border: #444444;
+  --input-border: #f0ece4;
+  --qr-bg:        #2a2a2a;
+}
+
+/* Smooth transition on theme change */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

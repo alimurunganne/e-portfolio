@@ -1,0 +1,527 @@
+/* ── Page Shell ── */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+
+/* ── Header ── */
+.site-header {
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.logo-square {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-link-custom {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.125rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  opacity: 0.6;
+  color: var(--text);
+}
+
+/* ── Main ── */
+.resume-main {
+  flex: 1;
+  padding-bottom: 6rem;
+}
+
+/* ── Hero ── */
+.resume-hero {
+  text-align: center;
+  padding: 5rem 1.5rem 3.5rem;
+  border-bottom: 1px solid var(--border-soft, rgba(0,0,0,0.1));
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.resume-role-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0 0 1rem;
+}
+
+.resume-contact-info {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.65;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume-contact-info .dot {
+  opacity: 0.4;
+}
+
+/* ── Layout Helpers ── */
+.container-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Info Grid (Profile + Education + Skills) ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-soft, rgba(0,0,0,0.1));
+}
+
+.info-section--full {
+  grid-column: 1 / -1;
+}
+
+.section-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--footer-grad-start, #888);
+  margin: 0 0 1rem;
+}
+
+.section-label--center {
+  text-align: center;
+}
+
+.section-sub {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.65;
+  text-align: center;
+  margin: -0.5rem 0 2.5rem;
+}
+
+.info-text {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ── Education ── */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edu-item {
+  border-left: 2px solid var(--border-soft, rgba(0,0,0,0.12));
+  padding-left: 1rem;
+}
+
+.edu-level {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.edu-detail {
+  font-family: 'Lora', serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  margin: 0 0 0.1rem;
+  opacity: 0.85;
+}
+
+.edu-meta {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.55;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Skills ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.skill-group-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0 0 0.6rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.8;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+
+.skill-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+}
+
+/* ── Timeline Section ── */
+.timeline-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border-soft, rgba(0,0,0,0.1));
+}
+
+.timeline-wrapper {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-soft, rgba(0,0,0,0.1));
+  z-index: 0;
+}
+
+.timeline-progress {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--footer-grad-start), var(--footer-grad-end));
+  transition: height 0.1s linear;
+  border-radius: 2px;
+}
+
+.timeline-entries {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.timeline-entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Dot ── */
+.entry-dot {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--footer-grad-start, #888);
+  background-color: var(--bg);
+  margin-top: 0.35rem;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.4s ease;
+}
+
+.timeline-entry.visible .entry-dot {
+  background-color: var(--footer-grad-start, #888);
+}
+
+/* ── Entry Card ── */
+.entry-card {
+  flex: 1;
+  border: 1px solid var(--border-soft, rgba(0,0,0,0.1));
+  background-color: var(--card-bg);
+  padding: 1.5rem 1.75rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.entry-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.entry-tag {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--footer-grad-start, #888);
+  opacity: 0.85;
+}
+
+.entry-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.35rem 0 0.2rem;
+}
+
+.entry-meta {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text);
+  opacity: 0.55;
+  margin: 0 0 0.5rem;
+}
+
+.entry-role {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.entry-desc {
+  font-family: 'Lora', serif;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0 0 1.1rem;
+}
+
+.entry-link {
+  font-family: 'Lora', serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border-soft);
+  padding: 0.35rem 1.1rem;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.entry-link:hover {
+  opacity: 0.6;
+}
+
+/* ── QR / Download Section ── */
+.qr-section {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.qr-frame {
+  position: relative;
+  width: 178px;
+  height: 178px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  background-color: var(--qr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.qr-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: #5a7a8a;
+  border-style: solid;
+}
+
+.qr-corner.tl { top: -3px; left: -3px; border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
+.qr-corner.tr { top: -3px; right: -3px; border-width: 3px 3px 0 0; border-radius: 0 4px 0 0; }
+.qr-corner.bl { bottom: -3px; left: -3px; border-width: 0 0 3px 3px; border-radius: 0 0 0 4px; }
+.qr-corner.br { bottom: -3px; right: -3px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+
+#qrCanvas img,
+#qrCanvas canvas {
+  width: 150px !important;
+  height: 150px !important;
+  display: block;
+}
+
+.qr-hint {
+  font-family: 'Lora', serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  opacity: 0.55;
+  margin: 0 0 2rem;
+}
+
+.btn-group-resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--btn-filled-bg);
+  color: var(--btn-filled-text);
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--btn-filled-hover-bg);
+  color: var(--btn-filled-hover-text);
+  transform: translateY(-2px);
+}
+
+.open-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+  background-color: var(--btn-filled-bg);
+  color: var(--btn-filled-text);
+  transform: translateY(-2px);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: linear-gradient(135deg, var(--footer-grad-start) 0%, var(--footer-grad-end) 100%);
+  padding: 3rem 2rem 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+.footer-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.social-links a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.social-links a svg { width: 28px; height: 28px; }
+
+.copyright {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page-title { font-size: 2.2rem; }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section--full {
+    grid-column: 1;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resume-contact-info {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .resume-contact-info .dot { display: none; }
+}
+
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
