@@ -19,7 +19,7 @@ import { ThemeToggle } from '../theme-toggle/theme-toggle';
 })
 export class Resume implements AfterViewInit, OnDestroy {
 
-  private googleDriveFileId = '1ZYJp747Q4SinaR-HgvROZXHVSp8oKmRS';
+  private googleDriveFileId = '1YV5P9D-FTdHzdZnNMemBkPGQCWbSPjk4';
   downloadUrl = `https://drive.google.com/uc?export=download&id=${this.googleDriveFileId}`;
   viewUrl     = `https://drive.google.com/file/d/${this.googleDriveFileId}/view?usp=sharing`;
 

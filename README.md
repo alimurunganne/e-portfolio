@@ -1,53 +1,60 @@
-# MyPortfolio
+# Anne Alimurung — Portfolio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
 
-## Development server
+## 🌐 Live Site
+
+Visit the deployed portfolio at:
+**[https://alimurunganne.github.io/AnneAlimurung-portfolio/](https://alimurunganne.github.io/AnneAlimurung-portfolio/)**
+
+## Development Server
 
 To start a local development server, run:
-
 ```bash
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Code Scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
 ```bash
 ng generate component component-name
 ```
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
 ```bash
 ng generate --help
 ```
 
 ## Building
 
-To build the project run:
-
+To build the project, run:
 ```bash
 ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## Deployment
+
+To deploy to GitHub Pages, run:
+```bash
+ng build --configuration production --base-href "https://alimurunganne.github.io/AnneAlimurung-portfolio/"
+npx angular-cli-ghpages --dir=dist/anne-alimurung-portfolio/browser
+```
+
+## Running Unit Tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Running End-to-End Tests
 
 For end-to-end (e2e) testing, run:
-
 ```bash
 ng e2e
 ```
